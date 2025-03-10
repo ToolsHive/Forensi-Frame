@@ -30,22 +30,7 @@ A high-performance Python tool for extracting frames from video files with multi
 
 ## 🔄 Process Flow
 
-```mermaid
-flowchart TD
-    A[Input Video File] --> B[Initialize Video Reader]
-    B --> C[Get Video Metadata]
-    C --> D[Create Thread Pool]
-    D --> E{Process Frames}
-    E --> |Thread 1| F1[Extract Frame Batch 1]
-    E --> |Thread 2| F2[Extract Frame Batch 2]
-    E --> |Thread N| F3[Extract Frame Batch N]
-    F1 --> G[Save Frames]
-    F2 --> G
-    F3 --> G
-    G --> H[Progress Update]
-    H --> |More Frames| E
-    H --> |Complete| I[Finish]
-```
+![Flowchart](flowchart.png)
 
 ## 📋 Prerequisites
 
